@@ -1,12 +1,10 @@
-# data_structure, algorithm
-
-## LeetCode 문제를 이용하여 아래 내용을 학습합니다.
+# LeetCode 문제를 이용하여 아래 내용을 학습합니다.
 
 1. 자료 구조
 2. 알고리즘
 3. python 특징
 
-## file name
+# file name
 
 - `py_... .ipynb`: pythonic 기능을 최대한 이용한 풀이입니다.
 
