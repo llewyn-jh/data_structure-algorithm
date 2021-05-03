@@ -7,18 +7,20 @@ If their contents are the same, then sort them lexicographically by their identi
 
 def reorder_log_file(logs: list) -> list:
     """Reorder a list of logs"""
-    digit = []
-    letter = []
+    digits = []
+    letters = []
 
+    # Classifiy digits and letters.
     for log in logs:
         if log.split()[1].isdigit():
-            digit.append(log)
+            digits.append(log)
         else:
-            letter.append(log)
+            letters.append(log)
 
-    letter.sort(key=lambda x: (x.split()[1], x.split()[0]))
+    # Sort the letters
+    letters.sort(key=lambda x: (x.split()[1], x.split()[0]))
 
-    return letter + digit
+    return letters + digits
 
 if __name__ == "__main__":
     input1 = [
