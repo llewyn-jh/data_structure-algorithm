@@ -1,9 +1,11 @@
 """Group anagrams"""
 
 import collections
+import time
 
 def group_anagrams_ver1(strs: list) -> list:
-    """Mine solution"""
+    """Mine solution
+    this is slower than the ver2 because the ver1 has one more for loop iteration."""
     anagrams = []
     for i, word in enumerate(strs):
         if i == 0:
@@ -40,4 +42,11 @@ def group_anagrams_ver2(strs: list) -> list:
 if __name__ == "__main__":
 
     words = ["eat", "tea", "tan", "ate", "nat", "bat"]
-    group_anagrams(words)
+
+    start = time.time()
+    group_anagrams_ver1(words)
+    print(time.time() - start)
+
+    start = time.time()
+    group_anagrams_ver2(words)
+    print(time.time() - start)
