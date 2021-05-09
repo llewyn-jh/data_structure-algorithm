@@ -5,7 +5,7 @@ import time
 def array_pair_sum_v1(nums):
     """Use even indexes"""
     nums.sort()
-    result = [nums for i, num in enumerate(nums) if i % 2 == 0]
+    result = [num for i, num in enumerate(nums) if i % 2 == 0]
     return sum(result)
 
 def array_pair_sum_v2(nums: list) -> int:
