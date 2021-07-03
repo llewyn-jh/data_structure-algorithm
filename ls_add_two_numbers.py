@@ -1,4 +1,8 @@
 """Add two numbers, leetcode 2"""
+
+# Method 1
+import functools
+
 class Solution(object):
     """Method 1: Convert data type"""
     def reverse_num(self, node):
@@ -6,20 +10,22 @@ class Solution(object):
         node: ListNode
         return: int
         """
-        num = ''
+        digits = []
         while node:
-            value, node = node.val, node.next
-            num += str(value)
+            digit, node = node.val, node.next
+            digits.append(digit)
 
-        return int(num[::-1])
+        num = functools.reduce(lambda x, y : 10 * x + y, digits[::-1], 0)
 
-    def to_linked_list(self, str_num):
+        return num
+
+    def to_linked_list(self, num):
         """
         type num: str
         return: LintNode
         """
         prev = None
-        for digit in str_num:
+        for digit in str(num):
             node = ListNode(digit)
             node.next = prev
             prev = node
@@ -32,16 +38,12 @@ class Solution(object):
         linked_list_2: ListNode
         return: ListNode
         """
-        str_num = str(self.reverse_num(linked_list_1) + \
-            self.reverse_num(linked_list_2))
+        num = self.reverse_num(linked_list_1) + \
+            self.reverse_num(linked_list_2)
 
-        return self.to_linked_list(str_num)
+        return self.to_linked_list(num)
 
-# Definition for singly-linked list.
-# class ListNode(object):
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+# Method 2
 class Solution(object):
     """Method 2: Full adder"""
     def add_two_numbers(self, linked_list_1, linked_list_2):
