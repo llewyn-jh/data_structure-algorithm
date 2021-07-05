@@ -23,3 +23,29 @@ class Solution(object):
             node = node.next.next
 
         return head
+
+# Method 2
+class Solution(object):
+    def swap_pairs(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+
+        node = prev =ListNode(None)
+        prev.next = head
+
+        while head and head.next:
+            # Swap pairs
+            temp = head.next
+            head.next = temp.next
+            temp.next = head
+
+            # Save swaped pairs
+            prev.next = temp
+
+            # Move the next
+            head = head.next
+            prev = prev.next.next
+
+        return node.next
