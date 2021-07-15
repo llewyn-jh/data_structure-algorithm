@@ -1,5 +1,4 @@
-from _typeshed import Self
-
+"""Stack with a linked list"""
 
 class Node:
     """Node: LinkedList"""
