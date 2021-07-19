@@ -1,15 +1,14 @@
-# LeetCode 문제를 풀고 아래 내용을 배웁니다.
+# Solve LeetCode and study the followings.
 
-1. 자료 구조
-2. 알고리즘
-3. python 특징
+1. data structure algorithm
+2. pythonic code
 
 # file name
 
-- `py_... .ipynb`: pythonic 기능을 최대한 이용한 풀이입니다.
+- `py_... .ipynb`: pythonic solution 
 
-- `ls_... .ipynb`: 선형 자료구조를 공부하기 위한 풀이입니다.
+- `ls_... .ipynb`: linear data structure
 
-- `nls_... .ipynb`: 비선형 자료구조를 공부하기 위한 풀이입니다.
+- `nls_... .ipynb`: non-linear data structure
 
-- `al_... .ipynb`: 알고리즘을 공부하기 위한 풀이입니다.
+- `al_... .ipynb`: data algorithm
